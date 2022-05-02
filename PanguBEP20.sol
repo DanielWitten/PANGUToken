@@ -5,11 +5,11 @@ import "./ERC20.sol";
 import "./Ownable.sol";
 
 
-contract PanguToken is ERC20 , Ownable {
+contract PANGUToken is ERC20 , Ownable {
 
     constructor(address masterWallet) ERC20("PANGU Token", "PANGU") Ownable(masterWallet) {
 
-        require(masterWallet != address(0),"Pangu Token: masterWallet is the zero address");
+        require(masterWallet != address(0),"PANGU Token: masterWallet is the zero address");
         _mint(masterWallet,1 * (10**9) * (10**18));            
     }
 }
