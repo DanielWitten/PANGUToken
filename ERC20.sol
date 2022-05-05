@@ -39,22 +39,9 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
 
     uint256 private _totalSupply;
 
-    string private _name;
-    string private _symbol;
+    string constant private _name = "PANGU Token";
+    string constant private _symbol = "PANGU";
 
-    /**
-     * @dev Sets the values for {name} and {symbol}.
-     *
-     * The default value of {decimals} is 18. To select a different value for
-     * {decimals} you should overload it.
-     *
-     * All two of these values are immutable: they can only be set once during
-     * construction.
-     */
-    constructor(string memory name_, string memory symbol_) {
-        _name = name_;
-        _symbol = symbol_;
-    }
 
     /**
      * @dev Returns the name of the token.
